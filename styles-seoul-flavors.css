@@ -1,0 +1,142 @@
+/* styles-seoul-flavors.css */
+/* Page-specific styles kept light so they layer on top of your global styles.css */
+
+/* HERO */
+.hero{
+  display:grid; gap:1.25rem; align-items:center;
+  background:#fff; border-bottom:1px solid var(--clr-line, #e9dfd3);
+  /* Background image layered on top */
+  background-image: url("images/SK-flag.png");
+
+  /* Make it cover the whole section */
+  background-size: cover;
+  background-position: center;
+
+  /* Use blend mode to mix with background color */
+  background-blend-mode: multiply; /* or overlay, soft-light, etc. */
+  padding: clamp(2.25rem, 6vw, 4rem) clamp(1rem, 5vw, 2rem);
+}
+.hero__copy{display:grid; gap:.8rem}
+.hero__title{
+  font-family: var(--ff-serif, Marcellus, Georgia, serif);
+  font-size: clamp(2rem, 3.5vw + 1rem, 3.25rem);
+  margin:0 0 .25rem;
+}
+.hero__subtitle{color: var(--clr-ink-muted, #5d5d5d); margin:0}
+.hero__badges{list-style:none; margin:.5rem 0 0; padding:0; display:flex; gap:.4rem; flex-wrap:wrap}
+.badge{
+  font-weight:700; font-size:.85rem; border:1px solid var(--clr-line, #e9dfd3); background:#F0B4BA;
+  padding:.25rem .6rem; border-radius:999px
+}
+.badge--accent{border-color: var(--clr-accent, #8c3b3b); color:#fff; background: var(--clr-accent, #8c3b3b)}
+.hero__cta{display:flex; gap:.5rem; flex-wrap:wrap}
+
+.hero__media img{
+  width:100%; border-radius: var(--radius-2, 18px);
+  box-shadow: var(--shadow-2, 0 10px 36px rgba(0,0,0,.12)); object-fit:cover
+}
+@media(min-width:980px){
+  .hero{grid-template-columns: 1.1fr .9fr}
+}
+
+/* GALLERY */
+.gallery{
+  padding: clamp(2.25rem, 6vw, 4rem) clamp(1rem, 5vw, 2rem);
+  background:#fff;
+  border-top:1px solid var(--clr-line, #e9dfd3);
+}
+.gallery h2{font-family: var(--ff-serif, Marcellus, Georgia, serif); margin:0 0 .75rem}
+.gallery__grid{
+  display:grid; gap: .8rem;
+  grid-template-columns: 1fr;
+}
+.gallery__grid figure{margin:0; overflow:hidden; border-radius:var(--radius-1, 12px); box-shadow: var(--shadow-1, 0 2px 10px rgba(0,0,0,.05))}
+@media(min-width:820px){
+  .gallery__grid{grid-template-columns: repeat(3, 1fr)}
+}
+
+/* ABOUT */
+.about{
+  padding: clamp(2.25rem, 6vw, 4rem) clamp(1rem, 5vw, 2rem);
+  background:#fff; border-top:1px solid var(--clr-line, #e9dfd3);
+}
+.about p{max-width:70ch}
+
+/* ITINERARY */
+.itinerary{
+  padding: clamp(2.25rem, 6vw, 4rem) clamp(1rem, 5vw, 2rem);
+  background:#fff; border-top:1px solid var(--clr-line, #e9dfd3);
+}
+.timeline{
+  counter-reset:day; list-style:none; padding:0; margin:0; display:grid; gap: .9rem
+}
+.timeline > li{
+  background:var(--clr-surface, #ffffff); border:1px solid var(--clr-line, #e9dfd3);
+  border-radius:var(--radius-2, 18px); padding:1rem; box-shadow: var(--shadow-1, 0 2px 10px rgba(0,0,0,.05));
+  position:relative
+}
+.timeline > li::before{
+  counter-increment:day; content:"Day " counter(day);
+  position:absolute; top:.75rem; right:.9rem; font-weight:700;
+  color: var(--clr-secondary, #3f6b5b); opacity:.85; font-size:.9rem
+}
+.note{color: var(--clr-ink-muted, #5d5d5d); margin-top:.5rem}
+
+/* INCLUDED */
+.included{
+  padding: clamp(2.25rem, 6vw, 4rem) clamp(1rem, 5vw, 2rem);
+  background:#fff; border-top:1px solid var(--clr-line, #e9dfd3);
+}
+.checklist, .no-list{list-style:none; margin:.5rem 0 0; padding:0; display:grid; gap:.45rem}
+.checklist li{padding-left:1.35rem; position:relative}
+.checklist li::before{
+  content:"✓"; position:absolute; left:.25rem; color: var(--clr-secondary, #3f6b5b); font-weight:800
+}
+.no-list li{padding-left:1.35rem; position:relative}
+.no-list li::before{content:"—"; position:absolute; left:.25rem; color: var(--clr-ink-muted, #5d5d5d)}
+
+/* PRICING */
+.pricing{
+  padding: clamp(2.25rem, 6vw, 4rem) clamp(1rem, 5vw, 2rem);
+  background:#fff; border-top:1px solid var(--clr-line, #e9dfd3);
+}
+.price-card{
+  background: linear-gradient(135deg,
+             color-mix(in srgb, var(--clr-secondary, #3f6b5b) 14%, #fff),
+             color-mix(in srgb, var(--clr-accent, #8c3b3b) 10%, #fff));
+  border:1px solid var(--clr-line, #e9dfd3); border-radius:var(--radius-2, 18px);
+  padding:1rem; box-shadow: var(--shadow-1, 0 2px 10px rgba(0,0,0,.05))
+}
+.price{margin:0 0 .35rem}
+.price strong{font-size:1.35rem}
+.price small{display:block; color: var(--clr-ink-muted, #5d5d5d)}
+.price__bullets{list-style:disc; padding-left:1.25rem; margin:.5rem 0}
+.disclaimer{color: var(--clr-ink-muted, #5d5d5d); font-size:.95rem}
+
+/* FAQ */
+.faq{
+  padding: clamp(2.25rem, 6vw, 4rem) clamp(1rem, 5vw, 2rem);
+  background:#fff; border-top:1px solid var(--clr-line, #e9dfd3);
+}
+.faq details{
+  background:#fff; border:1px solid var(--clr-line, #e9dfd3); border-radius:var(--radius-2, 18px); padding:.6rem .85rem;
+  box-shadow: var(--shadow-1, 0 2px 10px rgba(0,0,0,.05))
+}
+.faq details + details{margin-top:.6rem}
+.faq summary{cursor:pointer; font-weight:700}
+.faq summary::-webkit-details-marker{display:none}
+
+/* Buttons (inherits from global; add small tweaks) */
+.btn{box-shadow: var(--shadow-1, 0 2px 10px rgba(0,0,0,.05))}
+.btn--primary{background: var(--clr-accent, #8c3b3b); color:#fff; border-color: transparent}
+.btn--ghost{background: transparent; color: var(--clr-accent, #8c3b3b); border:1px solid var(--clr-accent, #8c3b3b)}
+
+/* Focus ring */
+:focus-visible{outline:3px solid var(--clr-secondary, #3f6b5b); outline-offset:3px}
+
+/* Optional: highlight active nav on desktop */
+@media (min-width: 880px){
+  .site-nav .nav-list a[aria-current="page"]{
+    background: #f5efe8; border-radius: var(--radius-1, 12px);
+  }
+}

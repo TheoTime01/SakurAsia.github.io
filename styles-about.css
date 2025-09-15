@@ -1,0 +1,128 @@
+/* styles-about.css */
+/* Page-specific styles for About page
+   - Reuses tokens from styles.css (palette, type scale, spacing)
+   - Adds lightweight layouts (grids, timeline, quotes) without redundancy */
+
+/* Hero variant */
+.hero--about::after{
+  background: linear-gradient(180deg, rgba(0,0,0,.32) 0%, rgba(0,0,0,.48) 100%);
+}
+
+/* About grid (story + image, responsive) */
+.about-grid{
+  display:grid; gap: var(--gap-3);
+  grid-template-columns: 1fr;
+}
+.about-media img{ width:100%; height:auto; border-radius: var(--radius-2); box-shadow: var(--shadow-1); }
+@media (min-width: 900px){
+  .about-grid{ grid-template-columns: 1.15fr .85fr; align-items: start; }
+}
+
+/* Values */
+.values-grid{
+  list-style:none; margin:0; padding:0;
+  display:grid; gap: var(--gap-3);
+  grid-template-columns: repeat( auto-fit, minmax(220px, 1fr) );
+}
+.value{
+  background: var(--clr-surface);
+  border: 1px solid var(--clr-line);
+  border-radius: var(--radius-2);
+  padding: 1rem;
+  box-shadow: var(--shadow-1);
+  display:grid; gap:.4rem; align-content:start;
+  transition: transform .2s ease, box-shadow .2s ease;
+}
+.value:hover{ transform: translateY(-3px); box-shadow: var(--shadow-2); }
+.value img{ filter: contrast(1.1); }
+
+/* Team */
+.team-grid{
+  list-style:none; margin:0; padding:0;
+  display:grid; gap: var(--gap-3);
+  grid-template-columns: repeat( auto-fit, minmax(220px, 1fr) );
+}
+.person{
+  background: var(--clr-surface);
+  border: 1px solid var(--clr-line);
+  border-radius: var(--radius-2);
+  text-align:center;
+  padding: 1rem;
+  box-shadow: var(--shadow-1);
+}
+.person__photo{
+  width: 138px; height: 138px; object-fit: cover; border-radius: 50%;
+  margin-inline: auto; display:block; box-shadow: var(--shadow-1);
+}
+.person__name{ margin:.6rem 0 .15rem; font-size: var(--fs-600); }
+.person__role{ margin:0; color: var(--clr-ink-muted); font-weight:600; }
+.person__bio{ margin:.4rem 0 0; color: var(--clr-ink-muted); }
+
+/* Sustainability */
+.pill-list{
+  list-style:none; margin:0 0 1rem; padding:0; display:flex; flex-wrap:wrap; gap:.5rem;
+}
+.pill-list li{
+  border:1px solid var(--clr-outline);
+  border-radius: 999px; padding:.35rem .7rem; background:#fff;
+  font-size: var(--fs-300);
+}
+.sustainability .about-grid{ margin-top: .25rem; }
+
+/* Timeline */
+.timeline{
+  counter-reset: step; list-style:none; margin:0; padding:0;
+  display:grid; gap: var(--gap-3);
+}
+.timeline > li{
+  position:relative; display:grid; grid-template-columns: 100px 1fr; gap: var(--gap-2);
+  background: var(--clr-surface);
+  border: 1px solid var(--clr-line);
+  border-radius: var(--radius-2);
+  padding: 1rem;
+  box-shadow: var(--shadow-1);
+}
+.timeline time{
+  font-weight:700; color: var(--clr-secondary); align-self:start;
+}
+.timeline h3{ margin:.15rem 0 .25rem; font-size: var(--fs-600); }
+@media (max-width: 560px){
+  .timeline > li{ grid-template-columns: 1fr; }
+  .timeline time{ order:-1; }
+}
+
+/* Quotes */
+.quotes{
+  list-style:none; margin:0; padding:0;
+  display:grid; gap: var(--gap-3);
+  grid-template-columns: repeat( auto-fit, minmax(260px, 1fr) );
+}
+.quote{
+  background: var(--clr-surface);
+  border: 1px solid var(--clr-line);
+  border-radius: var(--radius-2);
+  padding: 1rem;
+  box-shadow: var(--shadow-1);
+}
+.quote blockquote{ margin:0; font-style: italic; }
+.quote__author{ margin:.5rem 0 0; color: var(--clr-ink-muted); }
+
+/* Logo row */
+.logo-row{
+  list-style:none; margin:0; padding:0;
+  display:flex; gap: clamp(.75rem, 2vw, 1.25rem); flex-wrap:wrap; align-items:center;
+}
+.logo-row img{ display:block; opacity:.9; filter: grayscale(100%); transition: opacity .2s ease; }
+.logo-row img:hover{ opacity:1; filter:none; }
+
+/* CTA variant */
+.cta--about{
+  background: linear-gradient(135deg,
+              color-mix(in srgb, var(--clr-accent-2) 12%, #fff),
+              color-mix(in srgb, var(--clr-secondary) 14%, #fff));
+}
+@media (min-width: 880px){
+  .site-nav .nav-list a[aria-current="page"]{
+    background: #f5efe8; border-radius: var(--radius-1);
+  }
+}

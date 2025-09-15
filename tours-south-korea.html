@@ -1,0 +1,458 @@
+<!-- tours-south-korea.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- SEO -->
+  <meta charset="utf-8" />
+  <title>South Korea Tours — SakurAsia Travel</title>
+  <meta name="description" content="Browse handcrafted South Korea tours: Seoul food journeys, temple stays, Busan coastal breaks, and Jeju nature escapes. Filter by duration, style, and month." />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="canonical" href="https://www.example.com/tours/south-korea" />
+
+  <!-- Social / Open Graph -->
+  <meta property="og:title" content="South Korea Tours — SakurAsia Travel" />
+  <meta property="og:description" content="Curated small-group & private tours across Seoul, Busan, and Jeju." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://www.example.com/tours/south-korea" />
+  <meta property="og:image" content="https://www.example.com/images/og-korea-tours.jpg" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Marcellus&display=swap" rel="stylesheet" />
+
+  <!-- Base + page styles -->
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="styles-tours-korea.css" />
+  <link rel="icon" type="image/png" href="images/SakurAsia_logo.png">
+
+  <!-- JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"ItemList",
+    "name":"South Korea Tours",
+    "itemListElement":[
+      {"@type":"ListItem","position":1,"item":{"@type":"TouristTrip","name":"Seoul Flavors — 4 Days","description":"Market tastings, cooking class, and modern hansik dinner.","itinerary":[{"@type":"TouristAttraction","name":"Gwangjang Market"}],"offers":{"@type":"Offer","priceCurrency":"USD","price":"1290"}}},
+      {"@type":"ListItem","position":2,"item":{"@type":"TouristTrip","name":"Temple Stay & Tea — 5 Days","description":"Temple stay, city calm, and tea culture in Seoul & Gyeongju.","offers":{"@type":"Offer","priceCurrency":"USD","price":"1490"}}},
+      {"@type":"ListItem","position":3,"item":{"@type":"TouristTrip","name":"Busan & Coast — 5 Days","description":"Jagalchi seafood crawl, Gamcheon village, and coastal temple.","offers":{"@type":"Offer","priceCurrency":"USD","price":"1390"}}},
+      {"@type":"ListItem","position":4,"item":{"@type":"TouristTrip","name":"Jeju Nature Escape — 6 Days","description":"Olle trail hikes, tea fields, lava tubes, and waterfalls.","offers":{"@type":"Offer","priceCurrency":"USD","price":"1790"}}}
+    ]
+  }
+  </script>
+</head>
+
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <!-- Shared header/nav -->
+  <header class="site-header" role="banner">
+    <div class="container header-inner">
+      <a class="brand" href="index.html" aria-label="SakurAsia Travel home">
+        <img src="images/SakurAsia_logo.png" alt="SakurAsia Travel" width="auto" height="100" />
+      </a>
+
+      <!-- Accessible hamburger (CSS-only toggle) -->
+      <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-label="Toggle navigation" />
+      <label class="nav-toggle-btn" for="nav-toggle" aria-controls="site-nav" aria-expanded="false">
+        <span class="sr-only">Open menu</span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </label>
+
+    <nav id="site-nav" class="site-nav" role="navigation" aria-label="Primary">
+      <ul class="nav-list">
+        <!-- Destinations dropdown -->
+        <li class="nav-item nav-item--has-submenu">
+          <button class="nav-link" aria-haspopup="true" aria-expanded="false">
+            Destinations
+            <span class="nav-caret" aria-hidden="true">▾</span>
+          </button>
+          <ul class="submenu" role="menu">
+            <li><a href="destinations/south-korea.html" role="menuitem" data-loader>South Korea</a></li>
+            <li class="disabled" role="menuitem" aria-disabled="true">Japan (Coming Soon)</li>
+            <li class="disabled" role="menuitem" aria-disabled="true">Thailand (Coming Soon)</li>
+            <li class="disabled" role="menuitem" aria-disabled="true">Vietnam (Coming Soon)</li>
+          </ul>
+        </li>
+
+        <!-- Tours dropdown -->
+        <li class="nav-item nav-item--has-submenu">
+          <button class="nav-link" aria-haspopup="true" aria-expanded="false">
+            Tours
+            <span class="nav-caret" aria-hidden="true">▾</span>
+          </button>
+          <ul class="submenu" role="menu">
+            <li><a href="south-korea.html" role="menuitem" data-loader>South Korea Tours</a></li>
+            <li class="disabled" role="menuitem" aria-disabled="true">Japan Tours (Coming Soon)</li>
+            <li class="disabled" role="menuitem" aria-disabled="true">Thailand Tours (Coming Soon)</li>
+            <li class="disabled" role="menuitem" aria-disabled="true">Vietnam Tours (Coming Soon)</li>
+          </ul>
+        </li>
+
+        <li><a href="about.html" data-loader>About</a></li>
+        <li><a href="faq.html" data-loader>FAQ</a></li>
+        <li><a class="btn btn--ghost" href="contact.html" data-loader>Contact</a></li>
+
+        <!-- Language selector with flags -->
+        <li class="nav-item nav-item--has-submenu nav-item--lang">
+        <button class="nav-link" aria-haspopup="true" aria-expanded="false">
+            <img src="images/lang/en.png" alt="" class="lang-flag" /> EN
+            <span class="nav-caret" aria-hidden="true">▾</span>
+        </button>
+        <ul class="submenu submenu--lang" role="menu">
+            <li>
+            <a href="?lang=en" lang="en" hreflang="en" role="menuitem">
+                <img src="images/lang/en.png" alt="" class="lang-flag" /> English
+            </a>
+            </li>
+            <li>
+            <a href="?lang=fr" lang="fr" hreflang="fr" role="menuitem">
+                <img src="images/lang/fr.png" alt="" class="lang-flag" /> Français
+            </a>
+            </li>
+            <li>
+            <a href="?lang=pt" lang="pt" hreflang="pt" role="menuitem">
+                <img src="images/lang/pt.png" alt="" class="lang-flag" /> Português
+            </a>
+            </li>
+        </ul>
+        </li>
+
+      </ul>
+    </nav>
+    </div>
+  </header>
+
+
+  <!-- Hero -->
+  <section class="hero hero--tours-korea" aria-label="South Korea Tours">
+    <img class="hero__bg" src="images/bg.png" alt="" width="1920" height="1080" loading="eager" decoding="async" />
+    <div class="hero__content container">
+      <h1 class="hero__title">South Korea <span class="accent">Tours</span></h1>
+      <p class="hero__subtitle">Small-group or private trips across Seoul, Busan, and Jeju—curated by locals.</p>
+      <div class="hero__actions">
+        <a class="btn btn--primary" href="#results">Browse Tours</a>
+        <a class="btn btn--outline" href="/contact.html#enquiry">Request Custom</a>
+      </div>
+    </div>
+  </section>
+
+  <main id="main" tabindex="-1">
+    <!-- Filters -->
+    <section class="section section--padded" aria-labelledby="filter-title">
+      <div class="container">
+        <header class="section__header">
+          <h2 id="filter-title">Find Your Tour</h2>
+          <p class="section__lead">Filter by duration, style, or month.</p>
+        </header>
+
+        <form class="filters" aria-label="Filter South Korea tours" onsubmit="return false;">
+          <div class="filters__row">
+            <label>
+              <span class="filters__label">Duration</span>
+              <select id="filter-duration">
+                <option value="">Any</option>
+                <option value="short">3–4 days</option>
+                <option value="medium">5–6 days</option>
+              </select>
+            </label>
+
+            <label>
+              <span class="filters__label">Style</span>
+              <select id="filter-style">
+                <option value="">Any</option>
+                <option value="food">Food</option>
+                <option value="culture">Culture</option>
+                <option value="nature">Nature</option>
+                <option value="family">Family</option>
+              </select>
+            </label>
+
+            <label>
+              <span class="filters__label">Month</span>
+              <select id="filter-month">
+                <option value="">Any</option>
+                <option>Mar</option><option>Apr</option><option>May</option>
+                <option>Jun</option><option>Jul</option><option>Aug</option>
+                <option>Sep</option><option>Oct</option><option>Nov</option>
+                <option>Dec</option><option>Jan</option><option>Feb</option>
+              </select>
+            </label>
+
+            <div class="filters__actions">
+              <button class="btn btn--secondary" type="button" id="applyFilters">Apply</button>
+              <button class="btn btn--outline" type="button" id="clearFilters">Clear</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <!-- Results -->
+    <section id="results" class="section section--alt section--padded" aria-labelledby="results-title">
+      <div class="container">
+        <header class="section__header">
+          <h2 id="results-title">4 South Korea Tours</h2>
+        </header>
+
+        <ul class="tourcards" role="list">
+          <!-- Card 1 -->
+          <li class="tourcard" data-duration="short" data-style="food" data-months="Mar,Apr,May,Sep,Oct,Nov">
+            <figure class="tourcard__media">
+              <img src="/images/tours/seoul-streetfood.jpg" alt="Street food alley in Seoul at dusk" loading="lazy" width="720" height="480" />
+              <figcaption class="sr-only">Seoul street food tour</figcaption>
+            </figure>
+            <div class="tourcard__body">
+              <div class="tourcard__head">
+                <h3 class="tourcard__title">Seoul Flavors</h3>
+                <ul class="badges" role="list">
+                  <li class="badge">Food</li>
+                  <li class="badge">4 Days</li>
+                  <li class="badge">Easy Pace</li>
+                </ul>
+              </div>
+              <p class="tourcard__desc">Market tastings, hands-on cooking, and a modern hansik dinner.</p>
+              <dl class="meta">
+                <div><dt>From</dt><dd>USD 1,290</dd></div>
+                <div><dt>Group</dt><dd>Private / 6 max</dd></div>
+                <div><dt>Destinations</dt><dd>Seoul</dd></div>
+              </dl>
+
+              <details class="tourcard__details">
+                <summary>Itinerary preview</summary>
+                <ul class="it-list">
+                  <li>Day 1: Arrival, Insadong stroll, welcome dinner</li>
+                  <li>Day 2: Gyeongbokgung, Bukchon, tea ceremony</li>
+                  <li>Day 3: Gwangjang Market tastings + cooking class</li>
+                  <li>Day 4: Free morning, airport transfer</li>
+                </ul>
+                <p class="inc">Includes: boutique stay, breakfasts, tastings, guide, transfers.</p>
+              </details>
+
+              <div class="tourcard__actions">
+                <a class="btn btn--primary" href="/contact.html#enquiry" aria-label="Enquire about Seoul Flavors">Enquire</a>
+                <a class="btn btn--outline" href="/destinations/south-korea.html#experiences">See Experiences</a>
+              </div>
+            </div>
+          </li>
+
+          <!-- Card 2 -->
+          <li class="tourcard" data-duration="medium" data-style="culture" data-months="Mar,Apr,May,Sep,Oct,Nov,Dec,Jan,Feb">
+            <figure class="tourcard__media">
+              <img src="/images/korea/temple-stay.jpg" alt="Temple stay courtyard at dawn" loading="lazy" width="720" height="480" />
+              <figcaption class="sr-only">Korean temple stay</figcaption>
+            </figure>
+            <div class="tourcard__body">
+              <div class="tourcard__head">
+                <h3 class="tourcard__title">Temple Stay & Tea</h3>
+                <ul class="badges" role="list">
+                  <li class="badge">Culture</li>
+                  <li class="badge">5 Days</li>
+                  <li class="badge">Unhurried</li>
+                </ul>
+              </div>
+              <p class="tourcard__desc">Mindful mornings, monastic meals, and tea culture in Seoul & Gyeongju.</p>
+              <dl class="meta">
+                <div><dt>From</dt><dd>USD 1,490</dd></div>
+                <div><dt>Group</dt><dd>Private / 8 max</dd></div>
+                <div><dt>Destinations</dt><dd>Seoul · Gyeongju</dd></div>
+              </dl>
+
+              <details class="tourcard__details">
+                <summary>Itinerary preview</summary>
+                <ul class="it-list">
+                  <li>Day 1: Seoul palaces & tea ceremony</li>
+                  <li>Day 2–3: Temple stay program (meditation, chants)</li>
+                  <li>Day 4: Gyeongju heritage sites</li>
+                  <li>Day 5: Return to Seoul & depart</li>
+                </ul>
+                <p class="inc">Includes: boutique/temple stays, breakfasts, guide, rail tickets.</p>
+              </details>
+
+              <div class="tourcard__actions">
+                <a class="btn btn--primary" href="/contact.html#enquiry" aria-label="Enquire about Temple Stay & Tea">Enquire</a>
+                <a class="btn btn--outline" href="/destinations/south-korea.html#seasons">Best Time to Visit</a>
+              </div>
+            </div>
+          </li>
+
+          <!-- Card 3 -->
+          <li class="tourcard" data-duration="medium" data-style="culture,food" data-months="Apr,May,Jun,Sep,Oct,Nov">
+            <figure class="tourcard__media">
+              <img src="/images/korea/busan-coast.jpg" alt="Busan Haeundae beach and skyline" loading="lazy" width="720" height="480" />
+              <figcaption class="sr-only">Busan coastal tour</figcaption>
+            </figure>
+            <div class="tourcard__body">
+              <div class="tourcard__head">
+                <h3 class="tourcard__title">Busan & Coast</h3>
+                <ul class="badges" role="list">
+                  <li class="badge">Culture</li>
+                  <li class="badge">5 Days</li>
+                  <li class="badge">Easy Pace</li>
+                </ul>
+              </div>
+              <p class="tourcard__desc">Jagalchi seafood crawl, Gamcheon color walk, and seafront temple.</p>
+              <dl class="meta">
+                <div><dt>From</dt><dd>USD 1,390</dd></div>
+                <div><dt>Group</dt><dd>Private / 10 max</dd></div>
+                <div><dt>Destinations</dt><dd>Busan</dd></div>
+              </dl>
+
+              <details class="tourcard__details">
+                <summary>Itinerary preview</summary>
+                <ul class="it-list">
+                  <li>Day 1: KTX to Busan, BIFF & street snacks</li>
+                  <li>Day 2: Jagalchi Market & cooking demo</li>
+                  <li>Day 3: Gamcheon village & cafés</li>
+                  <li>Day 4: Haedong Yonggungsa & coast path</li>
+                  <li>Day 5: Free time, depart</li>
+                </ul>
+                <p class="inc">Includes: boutique stay, breakfasts, tastings, transfers, guide.</p>
+              </details>
+
+              <div class="tourcard__actions">
+                <a class="btn btn--primary" href="/contact.html#enquiry" aria-label="Enquire about Busan & Coast">Enquire</a>
+                <a class="btn btn--outline" href="/faq.html">FAQ</a>
+              </div>
+            </div>
+          </li>
+
+          <!-- Card 4 -->
+          <li class="tourcard" data-duration="medium" data-style="nature,family" data-months="Apr,May,Jun,Sep,Oct">
+            <figure class="tourcard__media">
+              <img src="/images/korea/jeju.jpg" alt="Jeju’s basalt coastline and blue water" loading="lazy" width="720" height="480" />
+              <figcaption class="sr-only">Jeju nature tour</figcaption>
+            </figure>
+            <div class="tourcard__body">
+              <div class="tourcard__head">
+                <h3 class="tourcard__title">Jeju Nature Escape</h3>
+                <ul class="badges" role="list">
+                  <li class="badge">Nature</li>
+                  <li class="badge">6 Days</li>
+                  <li class="badge">Family-friendly</li>
+                </ul>
+              </div>
+              <p class="tourcard__desc">Olle trail hikes, tea fields, lava tubes, and coastal waterfalls.</p>
+              <dl class="meta">
+                <div><dt>From</dt><dd>USD 1,790</dd></div>
+                <div><dt>Group</dt><dd>Private / 8 max</dd></div>
+                <div><dt>Destinations</dt><dd>Jeju</dd></div>
+              </dl>
+
+              <details class="tourcard__details">
+                <summary>Itinerary preview</summary>
+                <ul class="it-list">
+                  <li>Day 1: Arrival & seaside walk</li>
+                  <li>Day 2–3: Olle trail segments + tea field visit</li>
+                  <li>Day 4: Manjanggul lava tube & museum</li>
+                  <li>Day 5: Waterfalls & free beach time</li>
+                  <li>Day 6: Depart</li>
+                </ul>
+                <p class="inc">Includes: boutique stay, breakfasts, guide, island transfers.</p>
+              </details>
+
+              <div class="tourcard__actions">
+                <a class="btn btn--primary" href="/contact.html#enquiry" aria-label="Enquire about Jeju Nature Escape">Enquire</a>
+                <a class="btn btn--outline" href="/destinations/south-korea.html#seasons">Best Months</a>
+              </div>
+            </div>
+          </li>
+        </ul>
+
+        <p class="note">Prices are “from” per person (twin share) and vary by season and hotel class. We’ll confirm exact pricing with your dates.</p>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="section section--padded cta cta--tours" aria-label="Need a custom itinerary?">
+      <div class="container cta__inner">
+        <h2 class="cta__title">Want Something Tailored?</h2>
+        <p class="cta__text">Tell us your style—foodie, design, nature, or calm family time—and we’ll craft it.</p>
+        <a class="btn btn--secondary" href="/contact.html#enquiry">Start Your Booking</a>
+      </div>
+    </section>
+  </main>
+
+ <!-- Shared footer -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container footer-grid">
+    <!-- Destinations -->
+    <section aria-labelledby="footer-destinations">
+      <h3 id="footer-destinations">Destinations</h3>
+      <ul class="footer-list footer-list--destinations" role="list">
+        <li>
+          <a href="/destinations/south-korea.html" data-loader>South Korea</a>
+        </li>
+        <li>
+          <span class="comingsoon" aria-disabled="true">Japan <em>(Coming&nbsp;Soon)</em></span>
+        </li>
+        <li>
+          <span class="comingsoon" aria-disabled="true">Thailand <em>(Coming&nbsp;Soon)</em></span>
+        </li>
+        <li>
+          <span class="comingsoon" aria-disabled="true">Vietnam <em>(Coming&nbsp;Soon)</em></span>
+        </li>
+      </ul>
+    </section>
+
+    <!-- Explore -->
+    <section aria-labelledby="footer-explore">
+      <h3 id="footer-explore">Explore</h3>
+      <ul class="footer-list" role="list">
+        <li class="nav-item--has-submenu footer-submenu">
+          <span class="footer-head">Tours</span>
+          <ul class="footer-submenu__list" role="list">
+            <li><a href="/tours/south-korea.html" data-loader>South Korea Tours</a></li>
+            <li><span class="comingsoon" aria-disabled="true">Japan Tours <em>(Coming&nbsp;Soon)</em></span></li>
+            <li><span class="comingsoon" aria-disabled="true">Thailand Tours <em>(Coming&nbsp;Soon)</em></span></li>
+            <li><span class="comingsoon" aria-disabled="true">Vietnam Tours <em>(Coming&nbsp;Soon)</em></span></li>
+          </ul>
+        </li>
+        <li><a href="/about.html" data-loader>About</a></li>
+        <li><a href="/faq.html" data-loader>FAQ</a></li>
+        <li><a href="/contact.html" data-loader>Contact</a></li>
+      </ul>
+    </section>
+
+      <section aria-labelledby="footer-follow">
+        <h3 id="footer-follow">Follow</h3>
+        <ul class="social-list" role="list">
+          <li><a href="https://instagram.com" target="_blank" rel="noopener" aria-label="Instagram">
+            <img src="images/icons/instagram.png" alt="" width="24" height="24" /> Instagram
+          </a></li>
+          <li><a href="https://youtube.com" target="_blank" rel="noopener" aria-label="YouTube">
+            <img src="images/icons/youtube.png" alt="" width="24" height="24" /> YouTube
+          </a></li>
+        </ul>
+      </section>
+    </div>
+
+    <div class="container footer-bottom">
+      <p>© <span id="year"></span> SakurAsia Travel. All rights reserved.</p>
+    </div>
+  </footer>
+
+    <!-- Scroll-to-Top Button -->
+  <button id="scrollTopBtn" aria-label="Scroll to top">
+     <img src="images/cherry-arrow.png" alt="" />
+  </button>
+
+  <!-- Cherry Loader Overlay -->
+  <div id="loaderOverlay" class="loader-overlay" aria-hidden="true" aria-live="polite" role="dialog">
+    <div class="loader-card" role="document">
+      <img src="images/cheery.png" alt="Loading" class="loader-img" />
+      <div class="loader-text">LOADING...</div>
+    </div>
+  </div>
+
+  <script src="loader.js"></script>
+  <script src="scroll.js"></script>
+
+  <!-- Tiny inline script just to set the year; safe & non-blocking -->
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
